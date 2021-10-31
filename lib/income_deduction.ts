@@ -1,5 +1,5 @@
 // 基礎控除
-export const basicDeduction = 380000;
+export const basicDeduction = 480000;
 
 // 給与所得控除
 export const salaryDeduction = (salary) => {
