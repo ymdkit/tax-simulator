@@ -50,17 +50,17 @@ export default function Home() {
   return (
     <div className="p-5">
       <div className="flex">
-        <div className={`bg-gray-500 h-12 p-1`} style={{ width: barWidth * salary / totalIncome }}>
+        <div className={`bg-gray-500 h-12`} style={{ width: barWidth * salary / totalIncome }}>
           <p className="text-white text-center">
             年収：
             {salary.toLocaleString(undefined, { maximumFractionDigits: 0 })}
           </p>
         </div>
-        <div className={`bg-black h-12 p-1`} style={{ width: barWidth * miscellaneousIncome / totalIncome }}>
-          <p className="text-white text-center text-sm">
+        <div className={`bg-black h-12`} style={{ width: barWidth * miscellaneousIncome / totalIncome }}>
+          {/* <p className="text-white text-center text-sm">
             雑所得：
             {miscellaneousIncome.toLocaleString(undefined, { maximumFractionDigits: 0 })}
-          </p>
+          </p> */}
         </div>
       </div>
 
@@ -69,7 +69,7 @@ export default function Home() {
           className={`bg-blue-500 h-12`}
           style={{ width: (barWidth * socialInsurance(salary)) / totalIncome }}
         >
-          <p className="text-white text-center">
+          <p className="text-white text-center text-sm">
             社会保険料：
             {socialInsurance(salary).toLocaleString(undefined, {
               maximumFractionDigits: 0,
